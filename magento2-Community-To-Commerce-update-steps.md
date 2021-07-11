@@ -85,15 +85,15 @@ Ex :
 
 From
 ```php
-if (!(bool)$debugMode && extension_loaded(‘xdebug’)) {
+if (!(bool)$debugMode && extension_loaded('xdebug')) {
 	xdebug_disable();
 }
 
 ```
 To
 ```php
-if (!(bool)$debugMode && extension_loaded(‘xdebug’)) {
-	if (function_exists(‘xdebug_disable’)) {
+if (!(bool)$debugMode && extension_loaded('xdebug')) {
+	if (function_exists('xdebug_disable')) {
 	xdebug_disable();
 	}
 }
